@@ -42,3 +42,32 @@ console.log("User Category:", userCategory);
 let isAuthenticated = true;
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not Authenticated";
 console.log("Authentication Status:", authenticationStatus);
+
+let user = "";
+let dietaryServices;
+switch (user) {
+    case "employee":
+        dietaryServices = "Dietary Services";
+        break;
+    case "Enrolled Manager":
+        dietaryServices = "Dietary Services and one-on-one interaction with a dietician";
+        break;
+    case "subscriber":
+        dietaryServices = "Dietary Services only";
+        break;
+    default:
+        dietaryServices = "You need to enroll or at least subscribe first to avail this facility";
+}
+console.log(dietaryServices);
+
+let userSource = "";
+let DS; 
+if (userSource === "employee") {
+    DS = 'Dietary Services';
+} else if (userSource === 'enrolled manager')  {
+    DS = 'Dietary Services and one-on-one interaction with a dietician';
+} else if (userSource === 'subscriber') {
+    DS = 'Dietary Services only';
+} else {
+  DS = 'You need to enroll or at least subscribe first to avail this facility';
+} console.log(DS);
